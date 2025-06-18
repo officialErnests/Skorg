@@ -1,0 +1,103 @@
+$col1: #22ff33;
+$col2: #22d433;
+$col3: #1aa328;
+$TextCol1: #000000;
+
+$header-height: 50px;
+$gap-size: 0px;
+$padding-size:10px;
+$padding-size-content: 5px;
+$border-size: 3px;
+$border-type: solid;
+$flexGap: 50px;
+$gaper: 10px;
+$scrollbarSize: 10px;
+$text-size-l: 30px;
+$text-size-m: 20px;
+$text-size-s: 15px;
+body {
+    margin: 0px;
+    background-color: black;
+}
+body h1 {
+    margin: 0px;
+    padding:0px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: $header-height 9fr;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    gap: $gap-size;
+    &__header{
+        display: flex;
+        height: calc(100% - $border-size);
+        width: calc(100% - $padding-size * 2 - $border-size * 2);
+        padding:0 $padding-size;
+        background-color: $col1;
+        border: $border-type $border-size $col2;
+        align-items: center;
+        justify-content: space-between;
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:1;
+        grid-row-end:1;
+        &__navigation{
+            text-align: right;
+            &__link{
+                margin: 0 10px; // here
+                font-size:$text-size-m;
+                color: $TextCol1;
+                text-decoration: none;
+            }    
+        }
+    }
+
+    &__nav{
+        display:flex;
+        background-color: $col1;
+        padding:$padding-size;
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:2;
+        grid-row-end:3;
+        flex-direction: column;
+        border: $border-size $border-type $col2;
+        gap: $flexGap;
+        justify-content: center;
+        text-align: center;
+        &__link{
+            font-size:$text-size-l;
+            color: $TextCol1;
+            text-decoration: none;
+        }
+    }
+
+    &__info{
+        background-color: $col3;
+        border: $border-type $border-size $col2;
+        grid-column-start:2;
+        grid-column-end:3;
+        grid-row-start:2;
+        grid-row-end:3;
+        padding:$padding-size 0 0 $padding-size;
+        display: flex;
+        gap: $gaper;
+        width: calc(100% - $padding-size - $border-size * 2);
+        height: calc(100% - $padding-size - $border-size * 2);
+        overflow: hidden;
+        overflow-y: scroll;
+        flex-direction: column;
+        &__content{
+            width: calc(100% - $padding-size * 4);
+            height: fit-content;
+            background-color: $col1;
+            border: $border-type $border-size $col2;
+            padding: $padding-size-content;
+        }
+
+    }
+
+}
