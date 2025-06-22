@@ -1,0 +1,41 @@
+$button-height: 50px;
+$button-width: 100px;
+
+$input-height: 50px;
+$input-width: 300px;
+
+$text-size-info: 50px;
+$text-size-input: 35px;
+$gap-input:10px;
+
+.logmain{
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+    &__top{
+        &--button{
+            height:$button-height;
+            width: $button-width;
+        }
+    }
+    &__other{
+        align-self:center;
+        text-align: center;
+        justify-self: center;
+        &--text{
+            font-size:$text-size-info;
+        }
+        &--input{
+            font-size: $text-size-input;
+            margin-top:$gap-input;
+            height:$input-height;
+            width: $input-width;
+        }
+        &--button{
+            margin-top:$gap-input;
+            height:$button-height;
+            width: $button-width;
+        }
+    }
+}

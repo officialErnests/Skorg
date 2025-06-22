@@ -1,0 +1,156 @@
+$col1: #ffe79a;
+$col2: #fdd550;
+$col3: #ffc549;
+$col4: #dba226;
+$border-col:#000000;
+$TextCol1: #000000;
+
+$header-height: 50px;
+$border-size: 3px;
+$border-type: solid;
+$margin-size-sides: 10px;
+$margin-size: 30px;
+$height-logo: 80px;
+$logo-font-size: 35px;
+$text-size-header:30px;
+$padding-size:10px;
+$gap-for-content: 10px;
+$search-height:40px;
+$search-width: 550px;
+$margin-size-for-search: 5px;
+$gap-size-for-members:10px;
+$member-list-height: 75vh;
+$button-height: 50px;
+$button-width: 150px;
+$input-height: 25px;
+$input-width: 200px;
+$member-padding: 20px;
+
+.amain{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: $header-height 9fr;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    &__header{
+        display: flex;
+        height:$header-height;
+        grid-column-start:1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end:1;
+        padding:0 $padding-size;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $col1;
+        border: $border-type $border-size $border-col;
+        &__view{
+            display: flex;
+            gap: $gap-for-content; 
+            &--link{
+                font-size:$text-size-header;
+            }
+        }
+       
+        // &__profile{
+            
+        // }
+    }
+    &__left{
+        margin:$margin-size $margin-size-sides; 
+        background-color: $col1;
+        border: $border-type $border-size $border-col;
+        justify-content: center;
+        
+        &__search{
+            margin:$margin-size $margin-size-sides; 
+            background-color: $col1;
+            border: $border-type $border-size $border-col;
+            display:flex;
+            
+            justify-content: space-between;
+
+            &--input{
+                height: $search-height;
+                width: $search-width;
+                background-color: transparent;
+                border: none;
+                border-bottom: 2px solid $col3;
+                margin: $margin-size-for-search;
+            }
+            &--input:focus{
+                outline: none;
+            }
+        }
+
+        &__members{
+            display: flex;
+            flex-direction: column;
+            gap: $gap-size-for-members;
+            text-align: center;
+            height: $member-list-height;
+            overflow-y: auto;
+            &__admin{
+                display: flex;
+                flex-direction: column;
+                gap: $gap-size-for-members;
+                &__member{
+                    margin:0 $margin-size-sides; 
+                    padding:0 $member-padding;
+                    background-color: $col1;
+                    border: $border-type $border-size $border-col;
+                    text-align: left;
+                }
+            }
+            &__viewer{
+                display: flex;
+                flex-direction: column;
+                gap: $gap-size-for-members;
+                &__member{
+                    margin:0 $margin-size-sides;  
+                    padding:0 $member-padding;
+                    background-color: $col1;
+                    border: $border-type $border-size $border-col;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    &__right{
+        margin:$margin-size $margin-size-sides;
+        background-color: $col1;
+        border: $border-type $border-size $border-col;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-size-for-members;
+        text-align: left;
+        padding: $padding-size;
+        &--buttons{
+                height: $button-height;
+                width: $button-width;
+                background-color: $col2;
+                border: 2px solid $col4;
+        }
+        &--input{
+                height: $input-height;
+                width: $input-width;
+                background-color: $col1;
+                border: 2px solid $col3;
+        }
+        &--input:focus{
+                outline: none;
+        }
+    }
+    &__school{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height:$height-logo;
+        background-color: $col2;
+        border: $border-type $border-size $col4;
+        font-size: $logo-font-size;
+        text-align:center;
+    }
+}

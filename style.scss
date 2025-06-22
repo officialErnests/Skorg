@@ -1,6 +1,9 @@
-$col1: #22ff33;
-$col2: #22d433;
-$col3: #1aa328;
+@import "_login.scss";
+@import "_admin.scss";
+
+$col1: #ffe79a;
+$col2: #fdd550;
+$col3: #ffc549;
 $TextCol1: #000000;
 
 $header-height: 50px;
@@ -17,9 +20,9 @@ $text-size-m: 20px;
 $text-size-s: 15px;
 body {
     margin: 0px;
-    background-color: black;
+    background-color: $col1;
 }
-body h1 {
+body h1{
     margin: 0px;
     padding:0px;
 }

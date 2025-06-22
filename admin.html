@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skorg Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="amain">
+        <div class="amain__header">
+            <div class="amain__header__view">
+                <a href="main.html" class="amain__header__view--link">Viewer</a>
+                <a href="admin.html" class="amain__header__view--link">Admin</a>
+                <a href="#" class="amain__header__view--link">Owner</a>
+            </div>
+            <div class="amain__header__profile"> <!-- the guy who runs this shi -->
+                <h1>Lietotāju vārds</h1>
+            </div>
+        </div>
+            <div class="amain__left">
+                <div class="amain__left__search">
+                    <input type="text" id="search" placeholder="Search" class="amain__left__search--input">
+                    <button class="amain__left__search--button">Search</button>
+                </div>
+                <div class="amain__left__members"> <!-- people in the school-->
+                <div class="amain__left__members__admin">    <!-- isn't it obvious? -->
+                    <h1>Admins</h1>
+                    
+                    <div class="amain__left__members__admin__member"> <!-- person -->
+                        <h2>Admin</h2>
+                        <p>Pēteris</p>
+                    </div>
+                </div>
+                <div class="amain__left__members__viewer">
+                    <h1>Viewers</h1>
+                    
+                    <div class="amain__left__members__viewer__member">
+                        <h2>Member</h2>
+                        <p>Andrejs</p>
+                    </div>
+
+                    <div class="amain__left__members__viewer__member">
+                        <h2>Member</h2>
+                        <p>Kris</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="amain__middle">
+
+            </div>
+            <div class="amain__right">
+                <button class="amain__right--buttons">Change Name</button> <!-- Input a name to change the name of the user -->
+                <input type="text" id="changename" placeholder="New name" class="amain__right--input">
+                <button class="amain__right--buttons">Reset Password</button>
+                <button class="amain__right--buttons">New Password</button>
+                <button class="amain__right--buttons">Give Admin</button>
+                <button class="amain__right--buttons">Remove Admin</button>
+                <button class="amain__right--buttons">Add New Account</button>
+                <button class="amain__right--buttons">Remove From School</button>
+                <button class="amain__right--buttons">Create Account</button> <!-- cusername is Create an account with that username and same as the cpassword-->
+                <input type="text" id="cusername" placeholder="Username" class="amain__right--input">
+                <input type="text" id="cpassword" placeholder="Password" class="amain__right--input">
+            </div>
+            <div class="amain__school">
+                <h1>VTDT</h1>
+            </div>
+    </div>
+</body>
+</html>
