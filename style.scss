@@ -1,8 +1,9 @@
 @import "_login.scss";
+@import "_admin.scss";
 
-$col1: #ffe796;
-$col2: #ffe489;
-$col3: #ffd375;
+$col1: #ffe79a;
+$col2: #fdd550;
+$col3: #ffc549;
 $TextCol1: #000000;
 
 $header-height: 50px;
@@ -21,7 +22,7 @@ body {
     margin: 0px;
     background-color: $col1;
 }
-body h1 {
+body h1{
     margin: 0px;
     padding:0px;
 }
